@@ -9,7 +9,7 @@ def click():
     counter.set(counter.get() + 1)
 
 window = tkinter.Tk()
-
+window.title = "ხელოო უოლდ"
 counter = tkinter.IntVar()
 # Обнуляем созданный объект с помощью метода set
 counter.set(0) 
