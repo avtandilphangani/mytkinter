@@ -1,7 +1,6 @@
 # ფანჯრები 
 
 import tkinter
-import config
 
 def click():
 # метод get возвращает текущее значение counter
@@ -11,8 +10,11 @@ def click():
 window = tkinter.Tk()
 window.title = "ხელოო უოლდ"
 counter = tkinter.IntVar()
+counter1 = tkinter.IntVar()
 # Обнуляем созданный объект с помощью метода set
 counter.set(0) 
+counter1.set(5)
+
 
 frame = tkinter.Frame(window)
 frame.pack()
@@ -20,7 +22,7 @@ frame.pack()
 button = tkinter.Button(frame, text='Click', command=click)
 button.pack()
 # Вид: в реальном времени обновляется содержимое виджета Label
-label = tkinter.Label(frame, textvariable=counter)
+label = tkinter.Label(frame, textvariable=(counter))
 label.pack()
 # Можем изменять параметры фрейма:
 frame2 = tkinter.Frame(window, borderwidth=4, relief=tkinter.GROOVE)
@@ -47,4 +49,5 @@ label.pack()
 # Пробуем набрать текст в появившемся поле для ввода
 entry = tkinter.Entry(frame, textvariable=var)
 entry.pack()
+
 window.mainloop()
